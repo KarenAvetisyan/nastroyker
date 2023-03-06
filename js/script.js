@@ -22,6 +22,11 @@ $(document).ready(function(){
       }
   });
  
+  // main form 
+  $(".changingBtn.active-submit").click(function(){
+    $(this).parents('.form-box').addClass('form-box-active')
+    $(this).parents('form').addClass('fields-visible')
+  })
 
 
 })

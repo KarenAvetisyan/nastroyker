@@ -6,6 +6,14 @@
 	font-weight: 900;
 	font-style: normal;
 } 
+
+/* Inter-SemiBold */ 
+@font-face {
+	font-family: "Inter";
+	src: url("../../font/Inter/Inter-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+} 
  
 /* Inter-Regular */ 
 @font-face {
@@ -47,6 +55,34 @@ h1{
     }
 }
 
+h2{
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #F6EECA;
+}
+
+h3{
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    color: #DCA34C;
+    margin-bottom: 20px;
+}
+
+p:not(.banner-subtitle){
+    color: #FFFFFF;
+    font-weight: 400;
+}
+p:not(.fz-bigger, .banner-subtitle){
+    font-size: 16px;
+    line-height: 19px;
+}
+p.fz-bigger{
+    font-size: 18px;
+    line-height: 22px;
+}
+
 a {
     text-decoration: underline;
     &:hover {
@@ -73,4 +109,10 @@ a {
     }
 
 
+}
+
+@media (max-width: 767px) {
+    h2{
+        margin-bottom: 50px;
+    }
 }
