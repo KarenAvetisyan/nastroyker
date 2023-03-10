@@ -38,8 +38,8 @@ $(document).ready(function(){
     <h4 style="color: #000; margin-left: 2px;" >Страницы</h4>
     <a href="/index.html" target="blank">Главная</a>
     <a href="/razrabotka-saytov.html" target="blank">Разработка сайтов</a>
-    <a href="/components.html" target="blank">Компоненты</a>
     <a href="/prilojenie.html" target="blank">Есть для вас приложение</a>
+    <a href="/components.html" target="blank">Компоненты</a>
   `
   $('.toggle-helper').click(function(){
     $("#helper").toggleClass('show')
