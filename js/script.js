@@ -27,56 +27,31 @@ $(document).ready(function(){
     $(this).parents('.form-box').addClass('form-box-active')
     $(this).parents('form').addClass('fields-visible')
   })
-
+  
 
 })
 
 
-
-
-//  $(".nav").find("a").click(function(e) {
-//   e.preventDefault();
-//   var section = $(this).attr("href");
-//   $("html, body").animate({
-//       scrollTop: $(section).offset().top - 50
-//   });
-// });
-
-  
-    // ТАБЫ (ВРУЧНУЮ) 
-    // $(function() {
-    //   $('.tab-content-bg:first-child').show();
-    //   $('.tab-switch').bind('click', function(e) {
-    //     var thisElem = $(this);
-    //     var elemTarget = $(thisElem.data("target")); // get the target from data attribute
-    //     thisElem.siblings().removeClass('tab-switch-show');
-    //     elemTarget.siblings().css("display", "none")
-    //     thisElem.addClass('tab-switch-show');
-    //     elemTarget.fadeIn(500);
-    //   });
-    //   $('.tab-switch:first-child').trigger('click');
-    // });
-  
-  
-  // карта
-//   ymaps.ready(init);
-//   function init() {
-//       var myMap = new ymaps.Map("map", {
-//           center: [55.751426, 37.618879],
-//           zoom: 13,
-//           controls: ["zoomControl", 'trafficControl', 'routeButtonControl'],
-         
-//       });
-  
-//       myMap.behaviors.disable('scrollZoom');
-  
-//       myPlacemark = new ymaps.Placemark([55.751426, 37.618879], {}, {
-//           iconLayout: 'default#image',
-//           // iconImageHref: 'img/location.png',
-//           // iconImageSize: [48, 60],
-//           // iconImageOffset: [-24, -60]
-//       });
-  
-//       myMap.geoObjects.add(myPlacemark)
-  
-//   }
+  // -------------- helper ---------------
+  let target = document.querySelector('#helper')
+  target.innerHTML += `
+    <h4 style="color: #000; margin-left: 2px;" >Страницы</h4>
+    <a href="/index.html" target="blank">Главная</a>
+    <a href="/razrabotka-saytov.html" target="blank">Разработка сайтов</a>
+    <a href="/components.html" target="blank">Компоненты</a>
+    <a href="/prilojenie.html" target="blank">Есть для вас приложение</a>
+  `
+  $('.toggle-helper').click(function(){
+    $("#helper").toggleClass('show')
+  })
+  var current = location.pathname;
+  $(function(){
+    var current = location.pathname;
+    $('#helper > a').each(function(){
+        var $this = $(this);
+        // if the current path is like this link, make it active
+        if($this.attr('href').indexOf(current) !== -1){
+            $this.addClass('active');
+        }
+    })
+  })
