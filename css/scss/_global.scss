@@ -1,0 +1,243 @@
+/* Inter-Black */ 
+@font-face {
+	font-family: "Inter";
+	src: url("../../font/Inter/Inter-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+} 
+
+/* Inter-Bold */ 
+@font-face {
+	font-family: "Inter";
+	src: url("../../font/Inter/Inter-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+} 
+
+/* Inter-SemiBold */ 
+@font-face {
+	font-family: "Inter";
+	src: url("../../font/Inter/Inter-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+} 
+ 
+/* Inter-Regular */ 
+@font-face {
+	font-family: "Inter";
+	src: url("../../font/Inter/Inter-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}  
+
+/* Montserrat-Regular */ 
+@font-face {
+	font-family: "Montserrat-Regular";
+	src: url("../../font/Montserrat/Montserrat-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+} 
+
+/* Montserrat-SemiBold */ 
+@font-face {
+	font-family: "Montserrat-SemiBold";
+	src: url("../../font/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+} 
+ 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+html {
+    font-size: 14px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    background: #373737;
+}
+
+#helper{
+    width: 250px;
+    height: fit-content;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99999;
+    margin-left: -250px;
+    transition: 0.5s;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &.show{
+        margin-left: 0;
+    }
+    .toggle-helper{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: #fff;
+        right: -30px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-image: url(../../img//icons//gears.svg);
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-animation: rotating 7s linear infinite;
+        cursor: pointer;
+    }
+    a{
+        color: #fff;
+        background-color: #373737;
+        display: inline-block;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        margin: 2px 2px;
+        font-size: 12px;
+        display: inline-block;
+        border-radius: 5px;
+        &.active{
+            background-color: rgb(216, 73, 68);
+        }
+    }
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+h1{
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 85px;
+    color: #F6EECA;
+    span{
+        color: #6F746E;
+    }
+    &.big-title{
+        font-size: 200px;
+        line-height: 165px;
+        color: #403C39;
+    }
+}
+
+h2{
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    color: #F6EECA;
+}
+
+h3{
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    color: #DCA34C;
+    margin-bottom: 20px;
+    &.fz-smaller{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    &.fz-bigger{
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+
+h4{
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 15px;
+    color: #F3F3F3;
+}
+
+.custom-padding{
+    padding-top: 118px;
+    padding-bottom: 35px;
+}
+
+p:not(.banner-subtitle){
+    color: #FFFFFF;
+    font-weight: 400;
+}
+p:not(.stroke--text, .fz-bigger, .banner-subtitle){
+    font-size: 16px;
+    line-height: 19px;
+}
+p.fz-bigger:not(.stroke--text){
+    font-size: 18px;
+    line-height: 22px;
+}
+
+a {
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 1600px) {
+    h1{
+        &.big-title{
+            font-size: 11.1vw;
+            line-height: normal;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    h1{
+        font-size: 5vw; 
+        line-height: normal;
+    }
+
+    h3.fz-bigger {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    h3.fz-bigger {
+      font-size: 20px;
+    line-height: 24px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    h2{
+        margin-bottom: 50px;
+    }
+    h4{
+        font-weight: 700;
+    }
+    .custom-padding{
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+}
