@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="css/lib/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -49,12 +48,24 @@
                     <div class="col-lg-6">
 <pre class="brush: html notranslate">
 <code>
-<span><</span>span class="stroke--text" data-text="Текст">Текст<span><</span>/span<span>></span>
+<span><</span>div class="stroke--text">
+        <span><</span>span style="animation-delay: 0.8s">Т<span><</span>/span>
+        <span><</span>span style="animation-delay: 0.5s">Е<span><</span>/span>
+        <span><</span>span style="animation-delay: 1.2s">К<span><</span>/span>
+        <span><</span>span style="animation-delay: 1.5s">С<span><</span>/span>
+        <span><</span>span style="animation-delay: 0.2s">Т<span><</span>/span>
+<span><</span>/div>
 </code>
 </pre>
                     </div>
                     <div class="col-md-6 mb-5">
-                        <span class="stroke--text" data-text="Текст">Текст</span>
+                        <div class="stroke--text">
+                            <span style="animation-delay: 0.8s">Т</span>
+                            <span style="animation-delay: 0.5s">Е</span>
+                            <span style="animation-delay: 1.2s">К</span>
+                            <span style="animation-delay: 1.5s">С</span>
+                            <span style="animation-delay: 0.2s">Т</span>
+                    </div>
                     </div>
                     <hr>
                     <div class="col-md-6 mb-5">
@@ -441,7 +452,7 @@
                     <div class="col-md-6 mb-5">
 <pre>
 <code>
-<span><</span>div class="progress--bar">
+<span><</span>div data-inviewport class="progress--bar">
     <span><</span>div class="bar-content">
         <span><</span>p class="number">
             <span><</span>span class="minus">-<span><</span>/span<span>></span>
@@ -457,7 +468,7 @@
 </pre>
                     </div>
                     <div class="col-md-6 mb-5">
-                        <div class="progress--bar">
+                        <div data-inviewport class="progress--bar">
                             <div class="bar-content">
                             <p class="number">
                             <span class="minus">-</span>
@@ -475,7 +486,7 @@
 <pre>
 <code>
 <span><</span>div class="progress--box">
-    <span><</span>div class="progress--bar">
+    <span><</span>div data-inviewport class="progress--bar">
         <span><</span>div class="bar-content">
             <span><</span>p class="number">
                 <span><</span>span class="minus">-<span><</span>/span<span>></span>
@@ -498,7 +509,7 @@
                     </div>
                     <div class="col-md-6 mb-5">
                         <div class="progress--box">
-                            <div class="progress--bar">
+                            <div data-inviewport class="progress--bar">
                                 <div class="bar-content">
                                     <p class="number">
                                         <span class="minus">-</span>
@@ -522,7 +533,7 @@
 <pre>
 <code>
 <span><</span>div class="progress--box box-bigger">
-    <span><</span>div class="progress--bar">
+    <span><</span>div data-inviewport class="progress--bar">
         <span><</span>div class="bar-content">
             <span><</span>p class="number">
                 <span><</span>span class="minus">-<span><</span>/span<span>></span>
@@ -544,7 +555,7 @@
                     </div>
                     <div class="col-md-6 mb-5">
                         <div class="progress--box box-bigger">
-                            <div class="progress--bar">
+                            <div data-inviewport class="progress--bar">
                                 <div class="bar-content">
                                     <p class="number">
                                         <span class="minus">-</span>
@@ -602,7 +613,6 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
     <script src="js/lib/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/circular-progress-bar.js"></script>
     <script src="js/script.js"></script>
 </body>

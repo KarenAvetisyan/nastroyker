@@ -40,6 +40,13 @@
   font-weight: normal;
   font-style: normal;
 }
+/* Golos-Bold */
+@font-face {
+  font-family: "Golos-Bold";
+  src: url("../../font/Golos/Golos-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   padding: 0;
   margin: 0;
@@ -232,22 +239,15 @@ a:hover {
   width: 100%;
   margin-bottom: 0;
   text-align: center;
-  font-weight: 900;
+  font-family: "Golos-Bold";
+  letter-spacing: -6px;
   font-size: 180px;
   color: #282828;
   position: relative;
-  -webkit-text-stroke: 6px #6d655f;
+  -webkit-text-stroke: 3px #6d655f;
   line-height: 86%;
-  display: block;
-}
-.stroke--text::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  -webkit-text-stroke: 0;
-  pointer-events: none;
+  display: flex;
+  justify-content: center;
 }
 .stroke--text.fz-bigger {
   font-size: 209.5px;
@@ -255,7 +255,49 @@ a:hover {
 .stroke--text.behind__img {
   margin-bottom: -3.5%;
 }
+.stroke--text span {
+  opacity: 0;
+  -webkit-animation: shine 5s;
+          animation: shine 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
 
+@-webkit-keyframes shine {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shine {
+  0% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 1600px) {
   .stroke--text {
     font-size: 9.55vw;
@@ -266,8 +308,9 @@ a:hover {
 }
 @media (max-width: 767px) {
   .stroke--text {
-    -webkit-text-stroke: 2px #6d655f;
+    -webkit-text-stroke: 1px #6d655f;
     font-size: 12.5vw;
+    letter-spacing: -1px;
   }
   .stroke--text.fz-bigger {
     font-size: 14.1vw;
@@ -363,6 +406,7 @@ a:hover {
 .progress--box .progress--bar {
   margin-left: auto;
   margin-right: auto;
+  transition: 0.5s;
 }
 .progress--box .progress-text {
   margin-top: 38px;
@@ -506,6 +550,10 @@ a:hover {
 }
 .accordion--item {
   width: 100%;
+}
+.accordion--item .collapsing {
+  transition-duration: 1s;
+  transition-timing-function: ease;
 }
 .accordion--item .accordion-toggler {
   position: relative;
@@ -1626,6 +1674,30 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
+.sc-work-plan .single-plan .icon-box img {
+  transform-box: fill-box;
+  transform-origin: center;
+  -webkit-animation: gearRotate linear infinite;
+}
+.sc-work-plan .single-plan .icon-box img.rot-1 {
+  animation-direction: reverse;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+.sc-work-plan .single-plan .icon-box img.rot-2 {
+  animation-direction: reverse;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+}
+.sc-work-plan .single-plan .icon-box img.rot-3 {
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+.sc-work-plan .single-plan .icon-box img.rot-4 {
+  animation-direction: reverse;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
 .sc-work-plan .single-plan .icon-box span {
   font-weight: 900;
   font-size: 16px;
@@ -1641,6 +1713,17 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.sc-work-plan .rot-2 {
+  animation-direction: reverse;
+}
+@-webkit-keyframes gearRotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 .sc-marketing-base-services h3, .sc-marketing-base-services h2 {

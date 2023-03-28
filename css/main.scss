@@ -903,6 +903,26 @@
             margin-bottom: 30px;
             margin-left: auto;
             margin-right: auto;
+            img{
+                transform-box: fill-box;
+                transform-origin: center;
+                -webkit-animation: gearRotate linear infinite;
+                &.rot-1{
+                    animation-direction: reverse;
+                    animation-duration: 20s;
+                }
+                &.rot-2{
+                    animation-direction: reverse;
+                    animation-duration: 15s;
+                }
+                &.rot-3{
+                    animation-duration: 10s;
+                }
+                &.rot-4{
+                    animation-direction: reverse;
+                    animation-duration: 5s;
+                }
+            }
             span{
                 font-weight: 900;
                 font-size: 16px;
@@ -919,6 +939,19 @@
                 align-items: center;
                 justify-content: center
             }
+        }
+    }
+
+    .rot-2{
+     animation-direction: reverse;
+    }
+
+    @-webkit-keyframes gearRotate {
+        from{
+            -webkit-transform: rotate(0deg);
+        }
+        to{
+            -webkit-transform: rotate(360deg);
         }
     }
 }
