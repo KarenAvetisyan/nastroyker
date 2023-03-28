@@ -1,8 +1,8 @@
 <svg class="robot" width="1395" height="479" viewBox="0 0 1395 479" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
     .robot{
-        transform: scale(0.15);
-        animation: robotZoom 10s;
+        transform: scale(0.65);
+        animation: robotZoom 3s;
         animation-fill-mode: forwards;
         margin: auto;
     }
@@ -18,36 +18,36 @@
          animation-fill-mode: forwards;
         -webkit-animation-name: korabliAnim, floating;
          animation-iteration-count: infinite;
-         -webkit-animation-duration: 4s;
+         -webkit-animation-duration: 2s;
     }
 
     
     .korabli.k-1{
-        -webkit-animation-delay: 4s;
+        -webkit-animation-delay: 2s;
     }
 
     .korabli.k-2{
-        -webkit-animation-delay: 4.5s;
+        -webkit-animation-delay: 2.5s;
     }
 
     .korabli.k-3{
-        -webkit-animation-delay: 5s;
+        -webkit-animation-delay: 3s;
     }
 
     .korabli.k-4{
-        -webkit-animation-delay: 5.5s;
+        -webkit-animation-delay: 3.5s;
     }
 
     .korabli.k-5{
-        -webkit-animation-delay: 6s;
+        -webkit-animation-delay: 3.8s;
     }
 
     .korabli.k-6{
-        -webkit-animation-delay: 6.5s;
+        -webkit-animation-delay: 2.1s;
     }
 
     .korabli.k-7{
-        -webkit-animation-delay: 7s;
+        -webkit-animation-delay: 4s;
     }
 
 
