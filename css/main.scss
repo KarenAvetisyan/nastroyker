@@ -2,6 +2,28 @@
 @import 'scss/components';
 
 
+#wrapper{
+    position: relative;
+    &:before, &::after{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 100%;
+        width: 1px;
+        background-color: #932502;
+        z-index: 1;
+    }
+    &:before{
+        left: -1349px;
+    }
+    &::after{
+        right: -1349px;
+    }
+}
+
 // header 
 .header{
     height: 60px;
@@ -32,7 +54,7 @@
     list-style: none;
     align-items: center;
     li{
-        margin-right: 25px;
+        margin-left: 25px;
     }
     a{
         font-weight: 400;
@@ -43,6 +65,50 @@
     }
 }
 
+
+.overlay.open {
+    display: block;
+    position: fixed;
+    z-index: 9998;
+    background: #000;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.burger-menu {
+    display: block;
+    position: fixed;
+    width: 320px;
+    max-width: 85%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    padding: 25px 18px;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+    background: #282828;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    padding-top: 50px;
+    &.show{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+        box-shadow: 0 15px 30px 0 rgb(0 0 0 / 75%);
+    }
+}
+.close-menu {
+    display: block;
+}
+
+
 #burger-btn {
     z-index: 999;
     cursor: pointer;
@@ -51,7 +117,6 @@
     overflow: visible;
     position: relative;
     z-index: 2;
-    display: none;
   
     // THE LINES
     span,
@@ -134,9 +199,28 @@
     padding-top: 75px;
     position: relative;
     overflow: hidden;
+    z-index: 2;
     p:not(.banner-subtitle, .stroke--text){
         margin-top: 40px;
         text-align: left;
+    }
+    &:before, &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 100%;
+        width: 1px;
+        background-color: #932502;
+        z-index: 1;
+    }
+    &:before{
+        left: -1349px;
+    }
+    &::after{
+        right: -1349px;
     }
 }
 
@@ -674,6 +758,9 @@
 
 // текстовые блоки 
 .sc-info-text{
+    h4{
+        color: #DCA34C;
+    }
     .text-info{
         padding-bottom: 24px;
     }
@@ -714,6 +801,8 @@
     display: flex;
     width: 100%;
     align-items: center;
+    z-index: 2;
+    position: relative;
     p{
         font-size: 20px;
         line-height: 24px;
@@ -753,7 +842,7 @@
         background-color: #fff;
         border-radius: 6px;
         min-height: 242px;
-        padding: 25px 15px 30px 15px;
+        padding: 45px 45px 64px 38px;
         &.grey-bg{
             background: linear-gradient(0deg, #5B5A5F, #5B5A5F), #5B5B5B;
         }
@@ -765,6 +854,9 @@
         &.darker-white-bg{
             background: linear-gradient(0deg, #FBEDD0, #FBEDD0), #5B5B5B;
             .client-website span{color: #323232;}
+            ul li{
+                color: #000000;
+            }
         }
         &.darker-grey-bg{
             background: linear-gradient(0deg, #625B55, #625B55), #5B5B5B;
@@ -786,7 +878,7 @@
                 justify-content: space-between;
                 font-size: 10px;
                 line-height: 12px;
-                color: #000000;
+                color: #f5f5f5;
                 margin-bottom: 15px;
             }
             span{
@@ -813,7 +905,7 @@
                 display: inline-block;
                 background: #DCA34C;
                 border-radius: 3px;  
-                padding: 6px 12px;
+                padding: 6px 11px;
                 text-align: center;
                 border: none;
                 outline: none;   
@@ -880,8 +972,14 @@
             margin: 20px 13px;
             display: flex;
             justify-content: center;
+            &:hover{
+                img{
+                    transform: scale(1.2);
+                }
+            }
             img{
-                max-width: 100%
+                max-width: 100%;
+                transition: 0.2s;
             }
         }
     }
@@ -979,6 +1077,9 @@
         border: 2px solid #6F746E;
         border-radius: 57px;
         padding-top: 79px;
+        h3.fz-smaller{
+            color: #fff;
+        }
         h5{
             font-weight: 400;
             font-size: 20px;

@@ -184,6 +184,7 @@ h4{
     padding-bottom: 35px;
 }
 
+
 p:not(.banner-subtitle){
     color: #FFFFFF;
     font-weight: 400;
@@ -205,6 +206,14 @@ a {
     }
 }
 
+// min 
+@media (min-width: 991px) {
+    .pt-desktop-100{
+        padding-top: 100px!important;
+    }
+}
+
+// max 
 @media (max-width: 1600px) {
     h1{
         &.big-title{

@@ -1,4 +1,41 @@
 <svg width="232" height="180" viewBox="0 0 232 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+
+
+    .galochka{
+        animation: lds-facebook 2s infinite;
+    }
+
+    .gal-1{
+     animation: lds-facebook 2s infinite;
+    animation-delay: -0.24s;
+    }
+
+    .gal-2{
+    animation: lds-facebook 2s infinite;
+    animation-delay: -0.12s;
+    }
+
+    .gal-3{
+    animation: lds-facebook 2s infinite;
+    animation-delay: 0;
+    }
+    @keyframes lds-facebook {
+            0% {
+                opacity:0;
+            }
+            10%{
+            opacity:1;
+            }
+            90% {opacity: 1;}
+            100% {
+                opacity: 0;
+            }
+    }
+
+    
+   
+</style>
 <path d="M32.813 81.2519C32.8544 81.0799 32.9028 80.8823 32.9582 80.6611C33.1883 79.7436 33.5395 78.4231 34.0188 76.8345C34.9805 73.6471 36.4434 69.4293 38.4549 65.2389C40.4785 61.0234 42.984 56.9913 45.9688 54.0505C48.9287 51.1342 52.1882 49.4466 55.8455 49.4466C58.9307 49.4466 62.2568 51.7526 64.874 56.5672C67.4351 61.2786 68.9152 67.7743 68.5141 74.5181C68.1146 81.2368 65.8617 88.0086 61.1919 93.4198C56.9049 98.3876 50.4211 102.396 40.9831 104.089L32.813 81.2519Z" stroke="#6F746E" stroke-width="6"/>
 <path d="M29.6922 81.4348C29.6922 81.4348 37.1295 46.4466 55.8455 46.4466C74.5614 46.4466 84.516 101.45 38.993 107.433L29.6922 81.4348Z" fill="#6F746E"/>
 <path d="M45.4086 13.6796C45.4086 10.9182 47.6472 8.6796 50.4086 8.6796H156.848C159.609 8.6796 161.848 10.9182 161.848 13.6796V148.078C161.848 150.84 159.609 153.078 156.848 153.078H50.4086C47.6472 153.078 45.4086 150.84 45.4086 148.078V13.6796Z" fill="#FBEDD0"/>
@@ -23,9 +60,7 @@
 <path opacity="0.2" d="M98.549 49.6831H135.139V54.7748H98.549V49.6831Z" fill="#6F746E"/>
 <path d="M43.1679 175.455L28.8245 172.703L38.0746 100.058L48.3947 103.184L43.1679 175.455Z" stroke="#373737" stroke-width="3"/>
 <path d="M198.725 177.72L159.042 113.117L164.451 106.313L211.157 167.108L198.725 177.72Z" stroke="#373737" stroke-width="3"/>
-<path d="M75 46.8703L78.157 51.4748L84.7019 43" stroke="#DCA34C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M75 78.8808L78.157 83.4853L84.7019 75" stroke="#DCA34C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M75 78.8808L78.157 83.4853" stroke="#DCA34C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M75 111.87L78.157 116.475L84.7019 108" stroke="#DCA34C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M75 111.87L78.157 116.475" stroke="#DCA34C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="galochka gal-1" d="M75 46.8703L78.157 51.4748L84.7019 43" stroke="#DCA34C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="galochka gal-2" d="M75 78.8808L78.157 83.4853L84.7019 75" stroke="#DCA34C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="galochka gal-3" d="M75 111.87L78.157 116.475L84.7019 108" stroke="#DCA34C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

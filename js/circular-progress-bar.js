@@ -11,25 +11,20 @@ const inViewport = (progressBar, observer) => {
             let time = 2000 / num;
             let circle = item.target.querySelector('.circle');
             
-          setInterval(() => {
-            if(count == num){
-              clearInterval();
-              
-            } else{
-              count += 1;
-              numElement.innerText = count;
-              item.target.classList.add("watched");
-            }
-          }, time)
-
-          circle.style.strokeDashoffset 
-            = 454 - ( 454 * ( num / 100 ));
-          
+            setInterval(() => {
+              if(count == num){
+                clearInterval();
+                
+              } else{
+                count += 1;
+                numElement.innerText = count;
+                item.target.classList.add("watched");
+              }
+            }, time)
+          circle.style.strokeDashoffset = 454 - ( 454 * ( num / 100 ));
         }
-        
       })
     });
-    
 };
  
 const Obs = new IntersectionObserver(inViewport);

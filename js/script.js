@@ -1,11 +1,11 @@
 $(document).ready(function(){
   // burger menu 
   $('#burger-btn').click(function () {
-    $('.nav-menu').addClass('show');
+    $('.burger-menu').addClass('show');
     $('.overlay').addClass('open');
   });
-  $('.close-menu, .overlay, .nav-menu a').click(function () {
-    $('.nav-menu').removeClass('show');
+  $('.close-menu, .overlay').click(function () {
+    $('.burger-menu').removeClass('show');
     $('.overlay').removeClass('open');
   });
 
@@ -27,6 +27,7 @@ $(document).ready(function(){
     $(this).parents('.form-box').addClass('form-box-active')
     $(this).parents('form').addClass('fields-visible')
   })
+
 
 })
 
