@@ -1841,9 +1841,6 @@ a:hover {
 .sc-marketing-base-services h3, .sc-marketing-base-services h2 {
   margin-bottom: 30px;
 }
-.sc-marketing-base-services h3 {
-  padding-top: 10px;
-}
 .sc-marketing-base-services p span {
   font-size: 30px;
 }
@@ -1964,7 +1961,7 @@ a:hover {
   }
   .sc-marketing-base-services h2 {
     font-size: 20px;
-    line-height: 25px;
+    line-height: 24px;
   }
 }
 @media (max-width: 1440px) {
