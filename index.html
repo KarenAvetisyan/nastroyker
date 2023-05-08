@@ -22,7 +22,11 @@
                             <span></span>
                         </div>
                         <div class="burger-menu">
-                            
+                            <ul>
+                                <li><a href="#">Пункт 1</a></li>
+                                <li><a href="#">Пункт 2</a></li>
+                                <li><a href="#">Пункт 3</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-6">
@@ -277,14 +281,19 @@
                                 <form action="" class="form-group">
                                     <div class="button-group">
                                         <button type="button" class="changingBtn active-submit" data-text="Включить" ><img src="img/icons/on-icon.svg" alt=""></button>
-                                        <button class="changingBtn submit">
+                                        <button class="changingBtn submit" >
                                             <img src="img/icons/ar-top-icon.svg" alt="">
                                             <span>отправить</span>
                                         </button>
                                     </div>
                                     <div class="fields">
-                                        <input type="tel" placeholder="Телефон контакта">
-                                        <input type="text" placeholder="Имя контакта">
+                                        <div class="field-box">
+                                            <input type="tel" class="tel__field" placeholder="Телефон контакта" required>
+                                            <span class="field-error__text">Неправильно заполнено поле</span>
+                                        </div>
+                                        <div class="field-box">
+                                            <input type="text" placeholder="Имя контакта" required>
+                                        </div>
                                     </div>
                                     <div class="logo"><img src="img/logo.svg" alt=""></div>
                                 </form>
@@ -323,6 +332,25 @@
         </footer>
         
     </div>
+  
+    <!-- modal  -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formSendModal">
+        УСПЕШНО ОТПРАВЛЕНО
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal form-send_modal fade" id="formSendModal" tabindex="-1" aria-labelledby="formSendModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="send-modal-box">
+                    <h3>Заявка успешно отправлена</h3>
+                    <p class="fz-bigger">В скором времени наш менеджер свяжется с вами по указанному номеру телефона.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --- modal ---   -->
 
     <div id="helper">
 
@@ -331,6 +359,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
     <script src="js/lib/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="js/lib/jquery.inputmask.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

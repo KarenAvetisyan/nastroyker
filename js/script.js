@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('.burger-menu').addClass('show');
     $('.overlay').addClass('open');
   });
-  $('.close-menu, .overlay').click(function () {
+  $('.close-menu, .overlay, .burger-menu a').click(function () {
     $('.burger-menu').removeClass('show');
     $('.overlay').removeClass('open');
   });
@@ -28,8 +28,35 @@ $(document).ready(function(){
     $(this).parents('form').addClass('fields-visible')
   })
 
-
-})
+  // input mask and validation 
+  Inputmask({
+      "mask": "+7 (999) -999-99-99",
+    
+      "onincomplete": function(){ 
+          var input = this;
+          $(input).addClass('field_error');
+      }, 
+      
+      "oncomplete": function(){ 
+          var input = this;
+          $(input).removeClass('field_error');
+      }, 
+    
+      onKeyDown: function(buffer, opts) {
+          var input = this;
+        setTimeout(function() {
+          if(input.inputmask.isComplete()){
+              $(input).parents('form').find(".submit").removeAttr("disabled");
+            
+          }
+          else {
+              $(input).parents('form').find(".submit").attr("disabled", "disabled");
+        
+          }
+          },0);
+      }
+  }).mask(".tel__field");
+  })
 
 
 // -------------- helper ---------------

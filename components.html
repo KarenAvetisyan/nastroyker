@@ -114,7 +114,8 @@
 <code>
     <span><</span>form action="" class="small--form"<span>></span>
         <span><</span>div class="fields">
-            <span><</span>input type="tel" placeholder="+7 _ _ _ _ _ _ _ _ _ _ "<span>></span>
+            <span><</span>input type="tel" class="tel tel__field" required placeholder="+7 (___) -___-__-__"<span>></span>
+            <span><</span>span class="field-error__text">Неправильно заполнено поле<span><</span>/span>
         <span><</span>/div>
         <span><</span>button class="secondary--btn submit">Отправить<span><</span>/button<span>></span>
     <span><</span>/form<span>></span>
@@ -124,7 +125,8 @@
                     <div class="col-md-6 mb-5">
                         <form action="" class="small--form">
                             <div class="fields">
-                                <input type="tel" class="tel" placeholder="+7 _ _ _ _ _ _ _ _ _ _ ">
+                                <input type="tel" class="tel tel__field" required placeholder="+7 (___) -___-__-__">
+                                <span class="field-error__text">Неправильно заполнено поле</span>
                             </div>
                             <button class="secondary--btn submit">Отправить</button>
                         </form>
@@ -614,6 +616,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
     <script src="js/lib/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="js/circular-progress-bar.js"></script>
+    <script src="js/lib/jquery.inputmask.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

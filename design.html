@@ -472,7 +472,8 @@
                         <p>Сайт или любая другая программа это только инструмент бизнеса в руках предпринимателя. От того на сколько он качественный зависит многое но главное решают люди и команда которая работает с этим инструментом. Вместе с очень продвинутым интернет-магазином вы приобретаете нашу команду которую кончено может себе позволить далеко не каждая компания.</p>
                         <form action="" class="small--form">
                             <div class="fields">
-                                <input type="tel" placeholder="+7 _ _ _ _ _ _ _ _ _ _ ">
+                                <input type="tel" class="tel tel__field" required placeholder="+7 (___) -___-__-__">
+                                <span class="field-error__text">Неправильно заполнено поле</span>
                             </div>
                             <button class="secondary--btn submit">Отправить</button>
                         </form>
@@ -492,14 +493,19 @@
                                 <form action="" class="form-group">
                                     <div class="button-group">
                                         <button type="button" class="changingBtn active-submit" data-text="Включить" ><img src="img/icons/on-icon.svg" alt=""></button>
-                                        <button class="changingBtn submit">
+                                        <button class="changingBtn submit" >
                                             <img src="img/icons/ar-top-icon.svg" alt="">
                                             <span>отправить</span>
                                         </button>
                                     </div>
                                     <div class="fields">
-                                        <input type="tel" placeholder="Телефон контакта">
-                                        <input type="text" placeholder="Имя контакта">
+                                        <div class="field-box">
+                                            <input type="tel" class="tel__field" placeholder="Телефон контакта" required>
+                                            <span class="field-error__text">Неправильно заполнено поле</span>
+                                        </div>
+                                        <div class="field-box">
+                                            <input type="text" placeholder="Имя контакта" required>
+                                        </div>
                                     </div>
                                     <div class="logo"><img src="img/logo.svg" alt=""></div>
                                 </form>
@@ -547,6 +553,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
     <script src="js/lib/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="js/circular-progress-bar.js"></script>
+    <script src="js/lib/jquery.inputmask.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

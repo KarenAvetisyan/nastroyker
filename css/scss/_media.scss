@@ -213,6 +213,28 @@
 
 @media (max-width: 767px) {
 
+
+    .form-send_modal{
+        .modal-dialog{
+            margin: 20px 0.5rem;
+        }
+        .modal-content{
+            padding: 60px 40px;
+            min-height: 83vh;
+
+        }
+        .send-modal-box{
+            h3{
+                font-size: 20px;
+                line-height: 24px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+
     #wrapper, .sc-banner{
         &:before {
             left: 7px;
@@ -437,7 +459,19 @@
             input{
                 margin-right: 0;
                 width: 100%;
+                margin-bottom: 0;
             }
+            .tel__field.field_error{
+                & + .field-error__text{
+                    position: relative;
+                    bottom: 0;
+                }
+            }
+        }
+        .field-box{
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 10px;
         }
         .form-group{
             flex-wrap: wrap;

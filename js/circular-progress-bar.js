@@ -1,3 +1,5 @@
+
+
 let progressBar = document.querySelectorAll('.progress--bar');
 
 const inViewport = (progressBar, observer) => {
@@ -14,7 +16,6 @@ const inViewport = (progressBar, observer) => {
             setInterval(() => {
               if(count == num){
                 clearInterval();
-                
               } else{
                 count += 1;
                 numElement.innerText = count;
@@ -26,14 +27,17 @@ const inViewport = (progressBar, observer) => {
       })
     });
 };
+
+  const Obs = new IntersectionObserver(inViewport);
+  const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+  // Attach observer to every [data-inviewport] element:
+  const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+  ELs_inViewport.forEach(EL => {
+    Obs.observe(EL, obsOptions);
+
+  });
+
  
-const Obs = new IntersectionObserver(inViewport);
-const obsOptions = {}; //See: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
 
-// Attach observer to every [data-inviewport] element:
-const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
-ELs_inViewport.forEach(EL => {
-  Obs.observe(EL, obsOptions);
-
-});
 

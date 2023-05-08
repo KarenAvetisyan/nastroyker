@@ -538,6 +538,7 @@
     padding-top: 20px;
     .fields{
         flex-shrink: 0;
+        position: relative;
         input{
             max-width: 275px;
             width: calc(100% - 20px);
@@ -556,9 +557,36 @@
                 color: #000;
             }
         }
+        .tel__field.field_error{
+            border: 1px solid #932502;
+            background: #373737;
+            color: #fff;
+            & + .field-error__text{
+                display: inline-block;
+            }
+            &::placeholder{
+                color: #fff;
+            }
+        }
+        .field-error__text{
+            font-weight: 400;
+            font-size: 9px;
+            line-height: 11px;
+            color: #932502;
+            width: 100%;
+            display: none;
+            padding-left: 20px;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+        } 
     }
     .fields, .secondary--btn{
         margin: 10px 0;
+    }
+    .submit:disabled{
+        background: #FFFFFF;
+        color: #3E3E3E;
     }
     .secondary--btn{
         min-width: 200px;
@@ -579,6 +607,12 @@
             input{
                 width: 100%;
                 max-width: 100%;
+            }
+            .tel__field.field_error{
+                & + .field-error__text{
+                    position: relative;
+                    bottom: 0;
+                }
             }
         }
         .secondary--btn{

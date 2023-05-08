@@ -757,6 +757,7 @@ a:hover {
 }
 .small--form .fields {
   flex-shrink: 0;
+  position: relative;
 }
 .small--form .fields input {
   max-width: 275px;
@@ -782,8 +783,41 @@ a:hover {
 .small--form .fields input::placeholder {
   color: #000;
 }
+.small--form .fields .tel__field.field_error {
+  border: 1px solid #932502;
+  background: #373737;
+  color: #fff;
+}
+.small--form .fields .tel__field.field_error + .field-error__text {
+  display: inline-block;
+}
+.small--form .fields .tel__field.field_error::-moz-placeholder {
+  color: #fff;
+}
+.small--form .fields .tel__field.field_error:-ms-input-placeholder {
+  color: #fff;
+}
+.small--form .fields .tel__field.field_error::placeholder {
+  color: #fff;
+}
+.small--form .fields .field-error__text {
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+  color: #932502;
+  width: 100%;
+  display: none;
+  padding-left: 20px;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
 .small--form .fields, .small--form .secondary--btn {
   margin: 10px 0;
+}
+.small--form .submit:disabled {
+  background: #FFFFFF;
+  color: #3E3E3E;
 }
 .small--form .secondary--btn {
   min-width: 200px;
@@ -804,6 +838,10 @@ a:hover {
   .small--form .fields input {
     width: 100%;
     max-width: 100%;
+  }
+  .small--form .fields .tel__field.field_error + .field-error__text {
+    position: relative;
+    bottom: 0;
   }
   .small--form .secondary--btn {
     width: 100%;
@@ -915,6 +953,54 @@ a:hover {
   text-decoration: none;
 }
 
+.form-send_modal .modal-dialog {
+  max-width: 900px;
+}
+.form-send_modal .modal-content {
+  background: #373737;
+  border: 2px solid #DCA34C;
+  border-radius: 40px;
+  padding: 77px 120px;
+}
+.form-send_modal .send-modal-box {
+  display: inline-block;
+  width: 100%;
+  max-width: 360px;
+}
+.form-send_modal .send-modal-box h3 {
+  text-transform: uppercase;
+}
+.form-send_modal .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  transition: 0.5s;
+  opacity: 1;
+}
+.form-send_modal .btn-close:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 100%;
+  height: 1px;
+  background: rgb(220, 163, 76);
+}
+.form-send_modal .btn-close::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: -3px;
+  height: 100%;
+  width: 1px;
+  background: rgb(220, 163, 76);
+}
+
 .overlay.open {
   display: block;
   position: fixed;
@@ -953,6 +1039,19 @@ a:hover {
   opacity: 1;
   transform: translateX(0);
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.75);
+}
+.burger-menu ul {
+  margin-bottom: 0;
+  list-style: none;
+}
+.burger-menu ul li {
+  width: 100%;
+  padding: 10px 0;
+}
+.burger-menu ul a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 .close-menu {
@@ -1504,7 +1603,8 @@ a:hover {
   margin-right: 30px;
 }
 .sc-main-form .fields {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   visibility: hidden;
   transform: scale(0);
   transition: 0.3s;
@@ -1512,17 +1612,52 @@ a:hover {
 .sc-main-form .fields input {
   background: #D9D9D9;
   border-radius: 6px;
-  width: 185px;
+  width: 100%;
   height: 35px;
   padding-left: 20px;
   padding-right: 20px;
   border: none;
-  margin-right: 35px;
   outline: none;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   color: rgba(55, 55, 55, 0.6);
+  position: relative;
+}
+.sc-main-form .fields .tel__field.field_error {
+  border: 1px solid #932502;
+  background: #373737;
+  color: #fff;
+}
+.sc-main-form .fields .tel__field.field_error + .field-error__text {
+  display: inline-block;
+}
+.sc-main-form .fields .tel__field.field_error::-moz-placeholder {
+  color: #fff;
+}
+.sc-main-form .fields .tel__field.field_error:-ms-input-placeholder {
+  color: #fff;
+}
+.sc-main-form .fields .tel__field.field_error::placeholder {
+  color: #fff;
+}
+.sc-main-form .fields .field-error__text {
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+  color: #932502;
+  width: 100%;
+  display: none;
+  padding-left: 20px;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+.sc-main-form .field-box {
+  display: inline-block;
+  width: 185px;
+  margin-right: 35px;
+  position: relative;
 }
 .sc-main-form .logo {
   margin-left: auto;
@@ -2091,6 +2226,21 @@ a:hover {
   }
 }
 @media (max-width: 767px) {
+  .form-send_modal .modal-dialog {
+    margin: 20px 0.5rem;
+  }
+  .form-send_modal .modal-content {
+    padding: 60px 40px;
+    min-height: 83vh;
+  }
+  .form-send_modal .send-modal-box h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .form-send_modal .send-modal-box p {
+    font-size: 14px;
+    line-height: 17px;
+  }
   #wrapper:before, .sc-banner:before {
     left: 7px;
   }
@@ -2312,6 +2462,16 @@ a:hover {
   .sc-main-form .fields input {
     margin-right: 0;
     width: 100%;
+    margin-bottom: 0;
+  }
+  .sc-main-form .fields .tel__field.field_error + .field-error__text {
+    position: relative;
+    bottom: 0;
+  }
+  .sc-main-form .field-box {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
   .sc-main-form .form-group {
     flex-wrap: wrap;
