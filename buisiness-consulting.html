@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Настройкер - Бизнес консалтинг</title>
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+    <div id="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div id="burger-btn">
+                            <span></span>
+                        </div>
+                        <div class="burger-menu">
+                            <ul>
+                                <li><a href="#">Пункт 1</a></li>
+                                <li><a href="#">Пункт 2</a></li>
+                                <li><a href="#">Пункт 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="overlay"></div>
+                        <ul class="nav-menu">
+                            <button class="btn close-menu" ><img src="img/icons/menu-close-icon.svg" alt=""></button>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+             <!-- INTERNET MARKETING -->
+            <section class="sc-banner">
+
+                <div class="banner-bg">
+                    <img src="img/banner-images/bn-img-11.svg" alt="">
+                </div>
+
+                <div class="banner-title text-center">
+                    <div class="container">
+                        <img style="width: 27.5vw;" src="img/banner-images/bn-img-1-orange.svg" alt="">
+                        <h1>БИЗНЕС <span>КОНСАЛТИНГ</span></h1>
+                    </div>
+                </div>
+                
+            </section>
+
+
+        </main>
+
+        <!-- main form  -->
+        <section class="sc-main-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-box">
+                            <div class="form-content">
+                                <form action="" class="form-group">
+                                    <div class="button-group">
+                                        <button type="button" class="changingBtn active-submit" data-text="Включить" ><img src="img/icons/on-icon.svg" alt=""></button>
+                                        <button class="changingBtn submit" >
+                                            <img src="img/icons/ar-top-icon.svg" alt="">
+                                            <span>отправить</span>
+                                        </button>
+                                    </div>
+                                    <div class="fields">
+                                        <div class="field-box">
+                                            <input type="tel" class="tel__field" placeholder="Телефон контакта" required>
+                                            <span class="field-error__text">Неправильно заполнено поле</span>
+                                        </div>
+                                        <div class="field-box">
+                                            <input type="text" placeholder="Имя контакта" required>
+                                        </div>
+                                    </div>
+                                    <div class="logo"><img src="img/logo.svg" alt=""></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+          <!-- footer  -->
+          <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <p>Самара <a href="tel:89277119393">8-927-711-93-93</a><br>
+                            Пр. Кирова 318</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <p>Самара <a href="tel:89277119393">8-927-711-93-93</a><br>
+                            Пр. Кирова 318</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mt-mob">
+                        <p><a class="tdu" href="#">Смотреть все филиалы</a></p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="social">
+                            <a href="#"><img src="img/icons/vk.png" alt=""></a>
+                            <a href="#"><img src="img/icons/insta.png" alt=""></a>
+                            <a href="#"><img src="img/icons/tg.png" alt=""></a>
+                            <a href="#"><img src="img/icons/whatsapp.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+  
+    <!-- modal  -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formSendModal">
+        УСПЕШНО ОТПРАВЛЕНО
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal form-send_modal fade" id="formSendModal" tabindex="-1" aria-labelledby="formSendModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="send-modal-box">
+                    <h3>Заявка успешно отправлена</h3>
+                    <p class="fz-bigger">В скором времени наш менеджер свяжется с вами по указанному номеру телефона.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --- modal ---   -->
+
+    <div id="helper">
+
+        <div class="toggle-helper"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
+    <script src="js/lib/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="js/lib/jquery.inputmask.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

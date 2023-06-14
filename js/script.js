@@ -73,7 +73,9 @@ target.innerHTML += `
   <a href="/design.html" target="blank">Дизайн</a>
   <a href="/office-nets.html" target="blank">Сеть офисов</a>
   <a href="/team.html" target="blank">Команда</a>
+  <a href="/team-2.html" target="blank">Команда 2</a>
   <a href="/tarifi.html" target="blank">Тарифи техподдержки</a>
+  <a href="/buisiness-consulting.html" target="blank">Бизнес консалтинг</a>
   <br>
   <br>
   <a href="/components.html" style="background: green; width: 98%;" target="blank">Компоненты</a>

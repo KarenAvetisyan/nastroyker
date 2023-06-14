@@ -343,6 +343,35 @@
     &.text-center{
         justify-content: center;
     }
+    &.team-title{
+        h3{
+            font-size: 50px;
+            line-height: 61px;  
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+        img{
+            max-width: 307px;
+            width: 100%;
+        }
+    }
+}
+
+.banner-box {
+    .prilojenie-text{
+        font-weight: 900;
+        font-size: 31.7916px;
+        line-height: 38px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1px #DCA34C;
+        text-align: left;
+        position: absolute;
+        right: 0;
+        top: 56px;
+        left: -455px;
+        margin: auto;
+    }
 }
 
 .banner-subtitle{
@@ -377,6 +406,11 @@
         left: 0;
         width: 100%;
     }
+    &.team-img{
+        top: -61px;
+        bottom: auto;
+    }
+    
 }
 
 .banner-bg{
@@ -394,6 +428,137 @@
         height: 100%;
         object-fit: cover;
         object-position: top;
+    }
+}
+
+
+// new 
+.banner-bg.banner-globus{
+    right: 0;
+    overflow: hidden;
+}
+
+.banner-bg.banner-globus img{
+    -o-object-fit: cover;
+    object-fit: cover;
+    left: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: auto;
+    right: -1519px;
+    top: -87px; 
+    left: 0;
+    margin: auto;
+}
+
+.banner-special-img__text-box{
+    position: relative;
+    z-index: 1;
+    .raz-logo{
+        display: inline-block;
+        width: 100%;
+        img{
+            max-width: 100%;
+        }
+    }
+    .raz-bg{
+        img{
+            max-width: 100%;
+        }
+    }
+    .raz-box{
+        display: block;
+        position: relative;
+        
+        p{
+            font-weight: 400;
+            color: #FFFFFF;
+            margin: 7px 0!important;
+        }
+        &.raz-1{
+            max-width: 212px;
+            left: 50px;
+            margin: auto;
+           
+            .raz-logo{
+                margin-bottom: 7px;
+            }
+            span{
+                font-size: 15px;
+                line-height: 18px;
+                color:#0000;
+                background:
+                linear-gradient(-90deg,#fff 5px,#0000 0) 10px 0,
+                linear-gradient(#fff 0 0) 0 0;
+                background-size:calc(var(--n)*1ch) 200%;
+                -webkit-background-clip:padding-box,text;
+                background-clip:padding-box,text;
+                background-repeat:no-repeat;
+                animation: 
+                b 0.7s infinite steps(1),   
+                t calc(var(--n)*.1s) steps(var(--n)) forwards;
+            }
+        }
+        @keyframes t{
+            from {background-size:0 200%}
+          }
+          @keyframes b{
+            50% {background-position:0 -100%,0 0}
+          }
+        &.raz-2{
+            max-width: 177px;
+            left: 311px;
+            top: 3px;
+            margin: auto;
+            p{
+                font-size: 12px;
+                line-height: 15px;
+                color: #ABABAB;
+            }
+            .raz-bg{
+                position: absolute;
+                top: -44px;
+                left: -66px;
+                z-index: -1;
+                width: 314px;
+            }
+        }
+        &.raz-3{
+            max-width: 212px;
+            left: 70px;
+            margin: auto;
+            top: 61px;
+            p{
+                font-size: 15px;
+                line-height: 18px;
+                color: #ABABAB;
+            }
+            .raz-bg{
+                position: absolute;
+                top: -44px;
+                left: -66px;
+                z-index: -1;
+                width: 335px;
+            }
+        }
+        &.raz-4{
+            max-width: 72px;
+            top: -164px;
+            margin: auto;
+            left: -401px;
+            p{
+                font-size: 11.8356px;
+                line-height: 14px;
+                color: #ABABAB;
+            }
+            .raz-bg{
+                position: absolute;
+                top: -44px;
+                left: -21px;
+                z-index: -1;
+                width: 104px;
+            }
+        }
     }
 }
 

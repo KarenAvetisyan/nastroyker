@@ -1216,6 +1216,31 @@ a:hover {
 .banner-title.text-center {
   justify-content: center;
 }
+.banner-title.team-title h3 {
+  font-size: 50px;
+  line-height: 61px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.banner-title.team-title img {
+  max-width: 307px;
+  width: 100%;
+}
+
+.banner-box .prilojenie-text {
+  font-weight: 900;
+  font-size: 31.7916px;
+  line-height: 38px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #DCA34C;
+  text-align: left;
+  position: absolute;
+  right: 0;
+  top: 56px;
+  left: -455px;
+  margin: auto;
+}
 
 .banner-subtitle {
   font-weight: 900;
@@ -1250,6 +1275,10 @@ a:hover {
   left: 0;
   width: 100%;
 }
+.banner-img.team-img {
+  top: -61px;
+  bottom: auto;
+}
 
 .banner-bg {
   position: absolute;
@@ -1269,6 +1298,142 @@ a:hover {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+
+.banner-bg.banner-globus {
+  right: 0;
+  overflow: hidden;
+}
+
+.banner-bg.banner-globus img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  left: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: auto;
+  right: -1519px;
+  top: -87px;
+  left: 0;
+  margin: auto;
+}
+
+.banner-special-img__text-box {
+  position: relative;
+  z-index: 1;
+}
+.banner-special-img__text-box .raz-logo {
+  display: inline-block;
+  width: 100%;
+}
+.banner-special-img__text-box .raz-logo img {
+  max-width: 100%;
+}
+.banner-special-img__text-box .raz-bg img {
+  max-width: 100%;
+}
+.banner-special-img__text-box .raz-box {
+  display: block;
+  position: relative;
+}
+.banner-special-img__text-box .raz-box p {
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 7px 0 !important;
+}
+.banner-special-img__text-box .raz-box.raz-1 {
+  max-width: 212px;
+  left: 50px;
+  margin: auto;
+}
+.banner-special-img__text-box .raz-box.raz-1 .raz-logo {
+  margin-bottom: 7px;
+}
+.banner-special-img__text-box .raz-box.raz-1 span {
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0);
+  background: linear-gradient(-90deg, #fff 5px, rgba(0, 0, 0, 0) 0) 10px 0, linear-gradient(#fff 0 0) 0 0;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  -webkit-animation: b 0.7s infinite steps(1), t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
+          animation: b 0.7s infinite steps(1), t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
+}
+@-webkit-keyframes t {
+  from {
+    background-size: 0 200%;
+  }
+}
+@keyframes t {
+  from {
+    background-size: 0 200%;
+  }
+}
+@-webkit-keyframes b {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
+}
+@keyframes b {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
+}
+.banner-special-img__text-box .raz-box.raz-2 {
+  max-width: 177px;
+  left: 311px;
+  top: 3px;
+  margin: auto;
+}
+.banner-special-img__text-box .raz-box.raz-2 p {
+  font-size: 12px;
+  line-height: 15px;
+  color: #ABABAB;
+}
+.banner-special-img__text-box .raz-box.raz-2 .raz-bg {
+  position: absolute;
+  top: -44px;
+  left: -66px;
+  z-index: -1;
+  width: 314px;
+}
+.banner-special-img__text-box .raz-box.raz-3 {
+  max-width: 212px;
+  left: 70px;
+  margin: auto;
+  top: 61px;
+}
+.banner-special-img__text-box .raz-box.raz-3 p {
+  font-size: 15px;
+  line-height: 18px;
+  color: #ABABAB;
+}
+.banner-special-img__text-box .raz-box.raz-3 .raz-bg {
+  position: absolute;
+  top: -44px;
+  left: -66px;
+  z-index: -1;
+  width: 335px;
+}
+.banner-special-img__text-box .raz-box.raz-4 {
+  max-width: 72px;
+  top: -164px;
+  margin: auto;
+  left: -401px;
+}
+.banner-special-img__text-box .raz-box.raz-4 p {
+  font-size: 11.8356px;
+  line-height: 14px;
+  color: #ABABAB;
+}
+.banner-special-img__text-box .raz-box.raz-4 .raz-bg {
+  position: absolute;
+  top: -44px;
+  left: -21px;
+  z-index: -1;
+  width: 104px;
 }
 
 .sc-services {
@@ -2081,6 +2246,11 @@ a:hover {
   border-radius: 40px;
 }
 
+@media (min-width: 1440px) {
+  .banner-bg.banner-globus img {
+    width: 1233px;
+  }
+}
 @media (min-width: 1200px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1188px;
@@ -2106,6 +2276,11 @@ a:hover {
   #wrapper::after, .sc-banner::after {
     right: -1220px;
   }
+  .banner-bg.banner-globus img {
+    width: 96%;
+    right: -86%;
+    top: -53px;
+  }
 }
 @media (max-width: 1200px) {
   #wrapper:before, .sc-banner:before {
@@ -2119,6 +2294,11 @@ a:hover {
   .banner-subtitle {
     font-size: 4.72vw;
     line-height: normal;
+  }
+  .banner-box .prilojenie-text {
+    font-size: 22.7916px;
+    line-height: 28px;
+    left: -347px;
   }
   .sc-services .service-card {
     max-width: 170px;
@@ -2185,6 +2365,37 @@ a:hover {
     top: 5px;
     border-radius: 12px;
     border-width: 1px;
+  }
+  .banner-box .prilojenie-text {
+    font-size: 18.7916px;
+    line-height: 23px;
+    left: -266px;
+    top: 31px;
+  }
+  .banner-special-img__text-box .raz-box.raz-1 {
+    left: 85px;
+  }
+  .banner-special-img__text-box .raz-box.raz-2 {
+    max-width: 177px;
+    left: auto;
+    margin-left: auto;
+    margin-right: 0;
+    top: 26px;
+    right: 50px;
+  }
+  .banner-special-img__text-box .raz-box.raz-2 .raz-bg {
+    width: 275px;
+    top: -42px;
+    left: -48px;
+  }
+  .banner-special-img__text-box .raz-box.raz-3 .raz-bg {
+    top: -34px;
+    left: -58px;
+  }
+  .banner-special-img__text-box .raz-box.raz-4 {
+    left: 20px;
+    right: 0;
+    margin-left: 0;
   }
   .sc-services .service-card {
     max-width: 139px;
@@ -2265,13 +2476,96 @@ a:hover {
     width: 200%;
     margin-left: -48%;
   }
+  .banner-img.team-img {
+    top: auto;
+    bottom: 0;
+  }
+  .banner-img.team-img img {
+    max-height: 347px;
+  }
   .banner-title.mob__title-bigger h1 {
     font-size: 30px;
     line-height: 36px;
   }
+  .banner-title.team-title img {
+    max-width: 180px;
+  }
+  .banner-title.team-title h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
   .banner-subtitle.mob__fz-bigger {
     font-size: 7.3vw;
     margin-bottom: 5px;
+  }
+  .banner-box .prilojenie-text {
+    font-size: 11.7916px;
+    line-height: 17px;
+    left: -176px;
+    top: 19px;
+    -webkit-text-stroke: 0.5px #DCA34C;
+  }
+  .banner-special-img__text-box .banner-special-img__text-box {
+    position: absolute;
+    bottom: 40px;
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
+  .banner-special-img__text-box .raz-box.raz-1 {
+    left: auto;
+    right: 30px;
+    margin-right: 0;
+    max-width: 102px;
+  }
+  .banner-special-img__text-box .raz-box.raz-1 .raz-logo {
+    margin-bottom: 0;
+  }
+  .banner-special-img__text-box .raz-box.raz-1 span {
+    font-size: 9px;
+    line-height: 11px;
+    color: #fff;
+    -webkit-animation: none;
+            animation: none;
+    display: block;
+    margin-bottom: -18px;
+  }
+  .banner-special-img__text-box .raz-box.raz-2 {
+    display: none;
+  }
+  .banner-special-img__text-box .raz-box.raz-3 {
+    max-width: 127px;
+    padding-left: 10px;
+    padding-right: 5px;
+    left: auto;
+    right: 0;
+    margin-right: 30px;
+    top: 41px;
+  }
+  .banner-special-img__text-box .raz-box.raz-3 p {
+    font-size: 8px;
+    line-height: 10px;
+  }
+  .banner-special-img__text-box .raz-box.raz-3 .raz-bg {
+    width: 148px;
+    top: -8px;
+    left: -6px;
+  }
+  .banner-special-img__text-box .raz-box.raz-4 {
+    max-width: 31px;
+    left: 10px;
+    right: auto;
+    margin-right: 30px;
+    top: -56px;
+  }
+  .banner-special-img__text-box .raz-box.raz-4 p {
+    font-size: 5.2552px;
+    line-height: 6px;
+  }
+  .banner-special-img__text-box .raz-box.raz-4 .raz-bg {
+    width: 46px;
+    top: -12px;
+    left: -8px;
   }
   .sc-services {
     padding-top: 27px;
@@ -2690,10 +2984,31 @@ a:hover {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .banner-title.team-title h3 {
+    margin-top: 0;
+  }
+  .banner-img.team-img img {
+    max-height: 200px;
+  }
   .banner-box.square-frame:before {
     width: 69.5%;
   }
   .banner-box.square-frame::after {
     width: calc(69.5% - 10px);
+  }
+  .banner-box .prilojenie-text {
+    left: -35%;
+    -webkit-text-stroke: 0.4px #DCA34C;
+    font-size: 8px;
+    line-height: 11px;
+  }
+  .banner-bg.banner-globus img {
+    width: 100%;
+    right: -99%;
+    top: -13px;
+  }
+  .banner-bg.banner-globus + .banner-box {
+    margin-bottom: 0;
+    text-align: left;
   }
 }/*# sourceMappingURL=main.css.map */
