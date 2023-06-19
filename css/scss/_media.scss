@@ -404,7 +404,7 @@
                 margin-right: 30px;
                 top: 41px;
                 p{
-                    font-size: 8px;
+                    font-size: 7px;
                     line-height: 10px;
                 }
                 .raz-bg{
@@ -935,5 +935,12 @@
         margin-bottom: 0;
         text-align: left;
     }
+
+    .parallax-wrap{
+        img{
+            transform: none!important;
+        }
+    }
+    
 }
  

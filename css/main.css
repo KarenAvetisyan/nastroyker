@@ -141,6 +141,9 @@ h1.big-title {
   line-height: 165px;
   color: #403C39;
 }
+h1.my__shadow {
+  text-shadow: 3px -3px 0px #5B5A5F;
+}
 
 h2 {
   font-weight: 900;
@@ -163,6 +166,11 @@ h3.fz-smaller {
 h3.fz-bigger {
   font-size: 30px;
   line-height: 36px;
+}
+h3.fz-biggest {
+  font-size: 50px;
+  line-height: 61px;
+  margin-bottom: 0;
 }
 
 h4 {
@@ -217,7 +225,8 @@ a:hover {
     font-size: 5vw;
     line-height: normal;
   }
-  h3.fz-bigger {
+  h3.fz-bigger,
+h3.fz-biggest {
     font-size: 25px;
     line-height: 30px;
   }
@@ -226,6 +235,10 @@ a:hover {
   h3.fz-bigger {
     font-size: 20px;
     line-height: 24px;
+  }
+  h3.fz-biggest {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 @media (max-width: 767px) {
@@ -1241,6 +1254,28 @@ a:hover {
   left: -455px;
   margin: auto;
 }
+.banner-box .prilojenie-text {
+  opacity: 0;
+  transform: scale(0);
+  -webkit-animation: textAppear 1s;
+          animation: textAppear 1s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes textAppear {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes textAppear {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 .banner-subtitle {
   font-weight: 900;
@@ -1316,8 +1351,27 @@ a:hover {
   top: -87px;
   left: 0;
   margin: auto;
+  transform: scale(0);
+  -webkit-animation: 4s zoomMap;
+          animation: 4s zoomMap;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes zoomMap {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomMap {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .banner-special-img__text-box {
   position: relative;
   z-index: 1;
@@ -1386,6 +1440,10 @@ a:hover {
   left: 311px;
   top: 3px;
   margin: auto;
+  -webkit-animation: 2s screenFloating infinite;
+          animation: 2s screenFloating infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 .banner-special-img__text-box .raz-box.raz-2 p {
   font-size: 12px;
@@ -1404,6 +1462,10 @@ a:hover {
   left: 70px;
   margin: auto;
   top: 61px;
+  -webkit-animation: 2s screenFloating infinite;
+          animation: 2s screenFloating infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .banner-special-img__text-box .raz-box.raz-3 p {
   font-size: 15px;
@@ -1422,6 +1484,10 @@ a:hover {
   top: -164px;
   margin: auto;
   left: -401px;
+  -webkit-animation: 3s screenFloating infinite;
+          animation: 3s screenFloating infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .banner-special-img__text-box .raz-box.raz-4 p {
   font-size: 11.8356px;
@@ -1434,6 +1500,42 @@ a:hover {
   left: -21px;
   z-index: -1;
   width: 104px;
+}
+@-webkit-keyframes screenFloating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+@keyframes screenFloating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.parallax-bg {
+  z-index: 1;
+}
+
+.parallax-img.pr-img-4 {
+  z-index: -1;
+}
+
+.parallax-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .sc-services {
@@ -2543,7 +2645,7 @@ a:hover {
     top: 41px;
   }
   .banner-special-img__text-box .raz-box.raz-3 p {
-    font-size: 8px;
+    font-size: 7px;
     line-height: 10px;
   }
   .banner-special-img__text-box .raz-box.raz-3 .raz-bg {
@@ -3010,5 +3112,8 @@ a:hover {
   .banner-bg.banner-globus + .banner-box {
     margin-bottom: 0;
     text-align: left;
+  }
+  .parallax-wrap img {
+    transform: none !important;
   }
 }/*# sourceMappingURL=main.css.map */

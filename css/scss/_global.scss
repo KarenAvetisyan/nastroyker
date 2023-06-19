@@ -146,6 +146,9 @@ h1{
         line-height: 165px;
         color: #403C39;
     }
+    &.my__shadow{
+        text-shadow: 3px -3px 0px #5B5A5F;
+    }
 }
 
 h2{
@@ -168,6 +171,11 @@ h3{
     &.fz-bigger{
         font-size: 30px;
         line-height: 36px;
+    }
+    &.fz-biggest{
+        font-size: 50px;
+        line-height: 61px;
+        margin-bottom: 0;
     }
 }
 
@@ -230,7 +238,8 @@ a {
         line-height: normal;
     }
 
-    h3.fz-bigger {
+    h3.fz-bigger,
+    h3.fz-biggest  {
         font-size: 25px;
         line-height: 30px;
     }
@@ -242,6 +251,10 @@ a {
     h3.fz-bigger {
       font-size: 20px;
     line-height: 24px;
+    }
+    h3.fz-biggest {
+        font-size: 16px;
+        line-height: 22px;
     }
 
 }
