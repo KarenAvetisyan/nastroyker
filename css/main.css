@@ -1359,13 +1359,56 @@ h3.fz-biggest {
           animation-fill-mode: forwards;
 }
 
+.banner-bg.banner-globus img.office-net-dots {
+  z-index: 1;
+}
+
+.to-orange-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  -webkit-animation: 15s toOrangeMap infinite;
+          animation: 15s toOrangeMap infinite;
+}
+.to-orange-map img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: darken;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes toOrangeMap {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    left: 100%;
+  }
+}
+
+@keyframes toOrangeMap {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+    left: 100%;
+  }
+}
 @-webkit-keyframes zoomMap {
   100% {
     opacity: 1;
     transform: scale(1);
   }
 }
-
 @keyframes zoomMap {
   100% {
     opacity: 1;
