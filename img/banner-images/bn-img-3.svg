@@ -21,23 +21,28 @@
         50%{transform:translateY(10px); filter: blur(3px); opacity: 0.5;}
     }
 
-    .quart{
-        animation: quartAnim forwards;
-        animation-fill-mode: forwards;
-        
-    }
-
     .quart-1{
-      animation-duration: 3s;
+      transform-origin: center center;
+        animation: 2s quartAnim1 linear infinite;
+      animation-delay: 0;
     }
-
     .quart-2{
-       animation-duration: 6s;
+       transform-origin: center center;
+       animation: 2s quartAnim2 linear infinite;
+       animation-delay: 0.5s;
+    }
+       
+
+    @keyframes quartAnim1 {
+        0%{opacity: 0; transform: scale(0.8) rotate(16deg) translate(-39px, -7.5px);}
+        50%{opacity: 1; }
+        to{opacity: 0; transform: scale(1) rotate(18deg) translate(-33px, 13px);}
     }
 
-    @keyframes quartAnim {
-        0%{opacity: 0;}
-        50%{opacity: 1;}
+     @keyframes quartAnim2 {
+        0%{opacity: 0; transform: scale(0.8) rotate(17deg) translate(-44px, -4px);}
+        50%{opacity: 1; }
+        to{opacity: 0; transform: scale(1) rotate(17deg) translate(-35px, 15px);}
     }
 
    .path {
