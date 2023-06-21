@@ -16,6 +16,8 @@
 
 @media (min-width: 767px) {
 
+
+
     // СТРАНИЦА - ТАРИФИ ТЕХПОДДЕРЖКИ 
     .sc-rate-table{
         .table-box{
@@ -31,9 +33,15 @@
     }
     
 
+
 }                                    
 
 // max 
+@media (max-width: 1630px) {
+    .parallax-wrap img.parallax-bolshie{
+        left: -114px;
+    }
+}
 @media (max-width: 1440px) {
 
     #wrapper, .sc-banner{
@@ -201,6 +209,16 @@
                 margin-left: 0;
             }
         }
+    }
+
+    .parallax-wrap img{
+        width: 100%;
+    }
+
+    .parallax-wrap img.parallax-bolshie{
+        left: 0;
+        object-fit: contain;
+        object-position: bottom;
     }
 
     .sc-services{
@@ -430,6 +448,12 @@
                 }
             }
         }
+    }
+
+    .parallax-wrap img.parallax-bolshie{
+        left: 0;
+        object-fit: cover;
+        object-position: top;
     }
 
     .sc-services{
@@ -939,6 +963,7 @@
     .parallax-wrap{
         img{
             transform: none!important;
+            left: 0!important;
         }
     }
     

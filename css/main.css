@@ -1572,13 +1572,20 @@ h3.fz-biggest {
 .parallax-wrap img {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -60px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
+  width: calc(100% + 150px);
   height: 100%;
   -o-object-position: top;
      object-position: top;
+  max-width: 2200px;
+  margin: auto;
+  right: 0;
+}
+
+.parallax-wrap img.parallax-rocketes {
+  bottom: -15px;
 }
 
 .sc-services {
@@ -2414,6 +2421,11 @@ h3.fz-biggest {
     line-height: 24px;
   }
 }
+@media (max-width: 1630px) {
+  .parallax-wrap img.parallax-bolshie {
+    left: -114px;
+  }
+}
 @media (max-width: 1440px) {
   #wrapper:before, .sc-banner:before {
     left: -1220px;
@@ -2541,6 +2553,16 @@ h3.fz-biggest {
     left: 20px;
     right: 0;
     margin-left: 0;
+  }
+  .parallax-wrap img {
+    width: 100%;
+  }
+  .parallax-wrap img.parallax-bolshie {
+    left: 0;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: bottom;
+       object-position: bottom;
   }
   .sc-services .service-card {
     max-width: 139px;
@@ -2711,6 +2733,13 @@ h3.fz-biggest {
     width: 46px;
     top: -12px;
     left: -8px;
+  }
+  .parallax-wrap img.parallax-bolshie {
+    left: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
   }
   .sc-services {
     padding-top: 27px;
@@ -3158,5 +3187,6 @@ h3.fz-biggest {
   }
   .parallax-wrap img {
     transform: none !important;
+    left: 0 !important;
   }
 }/*# sourceMappingURL=main.css.map */

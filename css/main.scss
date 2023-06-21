@@ -631,13 +631,18 @@
 .parallax-wrap img{
     position: absolute;
     top: 0;
-    left: 0;
+    left: -60px;
     object-fit: cover;
-    width: 100%;
+    width: calc(100% + 150px);
     height: 100%;
     object-position: top;
+    max-width: 2200px;
+    margin: auto;
+    right: 0;
   }
- 
+ .parallax-wrap img.parallax-rocketes{
+    bottom: -15px;
+ }
   
 
 // services 
