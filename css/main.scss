@@ -421,6 +421,9 @@
     &.team-img{
         top: -61px;
         bottom: auto;
+        img.komanda-mob{
+            display: none;
+        }
     }
     
 }
@@ -519,7 +522,9 @@
     .raz-box{
         display: block;
         position: relative;
-        
+       
+          
+          
         p{
             font-weight: 400;
             color: #FFFFFF;
@@ -533,7 +538,8 @@
             .raz-logo{
                 margin-bottom: 7px;
             }
-            span{
+
+            span {
                 font-size: 15px;
                 line-height: 18px;
                 color:#0000;
@@ -547,7 +553,8 @@
                 animation: 
                 b 0.7s infinite steps(1),   
                 t calc(var(--n)*.1s) steps(var(--n)) forwards;
-            }
+              }
+  
         }
         @keyframes t{
             from {background-size:0 200%}
@@ -555,6 +562,7 @@
           @keyframes b{
             50% {background-position:0 -100%,0 0}
           }
+      
         &.raz-2{
             max-width: 177px;
             left: 311px;
@@ -616,6 +624,7 @@
             }
         }
     }
+   
     @keyframes screenFloating {
         0%{transform:translateY(0);}
         50%{transform:translateY(10px); }
